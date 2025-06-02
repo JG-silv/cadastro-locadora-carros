@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detalhes da Locação</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: Poppins, sans-serif;
+      background: #C6C7C9;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    h1,
+    h2 {
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      margin: 15px 0;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    button {
+      font-family: Poppins, sans-serif;
+      background: black;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #333;
+    }
+
+    .locador-foto {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 20px auto;
+      border: 3px solid #000;
+    }
+  </style>
+</head>
+
+<body><!--PAGINA Para mostrar O usuario os detalhes da sua locação após o cadastro e login-->
+  <div class="container">
+    <h1>Detalhes do Veículo e Locação</h1>
+    <div id="detalhes"></div>
+    <button onclick="voltar()">Voltar para Login</button>
+  </div>
+
+  <script>
+   let cliente = JSON.parse(sessionStorage.getItem('clienteLogado'));
+    //JSON (JavaScript Object Notation) é um formato padrão para trocar dados em texto,
+    //e JSON.stringify e JSON.parse são as formas de converter objetos em texto e texto em objetos no JavaScript.
+    if (!cliente) {
+      document.getElementById('detalhes').innerHTML = '<p>O Usuário não está logado.</p>';
+    } else {
+     let detalhesDiv = document.getElementById('detalhes');
+
+      // Imagens reais de veículos
+     let imagensVeiculos = {
+        "Jeep Renegade": "https://www.jeep.com.br//renegade/asset/versoes/turbo/jeep-renegade-turbo-carbon-black.webp",
+        "Corolla Cross": "https://quatrorodas.abril.com.br/wp-content/uploads/2024/04/XRX-Hybrid_C.Cross_2025_2-1.jpg?quality=70&strip=info&w=1280&h=720&crop=1",
+        "T-Cross": "https://mundodoautomovelparapcd.com.br/wp-content/uploads/2024/08/VW-T-Cross-200-TSI-2025-01-1536x864.jpg",
+        "Volvo XC60": "https://cdn.motor1.com/images/mgl/0e7LGp/s3/volvo-xc60-2024.webp",
+        "Gol": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Volkswagen_Gol_Highline_2023_%2853708009248%29_%28cropped%29.jpg/960px-Volkswagen_Gol_Highline_2023_%2853708009248%29_%28cropped%29.jpg",
+        "Fiat Palio": "https://tribunadonorte.com.br/wp-content/uploads/2023/07/84965.jpg",
+        "Siena": "https://production.autoforce.com/uploads/version/profile_image/4482/comprar-attractive-1-4_bf02c9c6c3.png",
+        "Ford Ka": "https://img2.icarros.com/dbimg/galeriaimgmodelo/1/133902_1.webp",
+        "Renault Kwid": "https://s2.glbimg.com/eaTJV7tLOellWlLRozE9QlidATI=/fit-in/940x590/e.glbimg.com/og/ed/f/original/2017/06/12/renault-kwid-dianteira.jpg",
+        "Fiat Mobi": "https://production.autoforce.com/uploads/version/profile_image/10921/model_main_webp_comprar-like-1-0_9eee82ebb4.png.webp"
+      };
+
+      detalhesDiv.innerHTML = `
+        <h2>Locador: ${cliente.nome}</h2>
+        <p><strong>CPF do Locador:</strong> ${cliente.cpf}</p>
+        <p><strong>Placa:</strong> ${cliente.placa}</p>
+        <p><strong>Tipo do Seguro:</strong> ${cliente.cor}</p>
+        <p><strong>Categoria:</strong> ${cliente.categoria}</p>
+        <p><strong>Modelo:</strong> ${cliente.modelo}</p>
+        <p><strong>UF:</strong> ${cliente.uf}</p>
+        <p><strong>Acessorios Adcionais:</strong> ${cliente.acessoriosAdds}</p>
+        <p><strong>Data Retirada:</strong> ${cliente.dataRetirada}</p>
+        <p><strong>Data Devolução:</strong> ${cliente.dataDevolucao}</p>
+        <img src="${imagensVeiculos[cliente.modelo] || ''}" alt="Imagem do veículo" />
+      `;
+    }
+
+    function voltar() {
+      sessionStorage.removeItem('clienteLogado');
+      window.location.href = 'TrabalhoFinal.html'; //linkado com o comando window para redirecionar a pagina do cadastro
+    }
+  </script>
+
+</body>
+
+</html>

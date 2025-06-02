@@ -1,0 +1,12 @@
+Adcionar verificações é utilizar classes
+Adcionar borda Verde para o que está correto é o Vermelho para errado.
+ 000.000.000-00
+ outra retirar essa ideia refazer de tudo, mais continuar com o mesmo layout de formulario continua
+  com isso mais pense que é obrigatorio ter uma ideia diferente nao utilizar todos esse botoes e coloqcar 
+  apenas os necessarios para uma locadora 
+  colocando a data de retirada e devolução do veiculo, placa do carro a cor do carro que posso fazer em um select talvez 
+  faça uma ideia tambem de que para enviar as informações estarem prontos aparecer cadastro feito com sucesso e 
+  fazer uma barra ou algo parecido para mostrar o quanto esta certo em questão de formulario e tratamento de dados
+faca tambem para comlocar cadastro e depois um de login que voce vai salvar e por o cpf que nao precisa ser um verdadeiro aceite qualquer um 
+e placa do veiculo  mais tire as paradas de letras em inputs que so pode usar numero e nao coloque max legth nas inputs faca um limite mais para
+enviar deixe normalmente utilize todos os comando que te enviei 
