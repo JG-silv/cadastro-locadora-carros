@@ -35,7 +35,5 @@ It allows users to **register, log in, and manage car rental data** in a simple 
 📦 car-rental-system
 
 ## 📖 Author
-
-👤 Github
 ```bash
    https://github.com/JG-silv
