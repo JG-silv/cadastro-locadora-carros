@@ -48,4 +48,4 @@ It allows users to **register, log in, and manage car rental data** in a simple 
 📖 Author
 
 👤 José Gabriel
-🔗 GitHub: your-username
+🔗 GitHub: JG-silv
