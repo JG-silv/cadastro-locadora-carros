@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Car Rental - Registration</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css">
+<meta name="author" content="José">
+</head>
+
+
+<body>
+<div class="container">
+<center><img src="Images/logo.jpg" alt="Logo" style="width: 220px; border-radius: 20px;"></center>
+<h1>Rental Registration</h1>
+
+
+<div class="progress-bar">
+<div class="progress-filled" id="progress"></div>
+</div>
+
+
+<!-- User Registration -->
+<div class="input-row">
+<input type="text" id="name" placeholder="Renter's Name" onblur="formatName(this)" onchange="updateProgress()" />
+<input type="text" id="ssn" placeholder="Social Security Number" onblur="formatSSN(this)" maxlength="14" onchange="updateProgress()" />
+</div>
+
+
+<div class="input-row">
+<input type="text" id="father" placeholder="Father's Name" onblur="formatName(this)" onchange="updateProgress()" />
+<input type="text" id="mother" placeholder="Mother's Name" onblur="formatName(this)" onchange="updateProgress()" />
+</div>
+
+
+<div class="input-row"><!-- Plate and Insurance -->
+<input type="text" id="plate" placeholder="Vehicle Plate" onblur="formatPlate(this)" maxlength="7" onchange="updateProgress()" />
+<select id="insurance" onchange="updateProgress()">
+<option value="">Vehicle Insurance</option>
+<option>Basic</option>
+<option>Intermediate</option>
+<option>Full</option>
+<option>Premium</option>
+</select>
+</div>
+
+
+<div class="input-row"><!-- Car Categories -->
+<select id="category" onchange="updateModels(); updateProgress()">
+<option value="">Car Category</option>
+<option value="A">A - SUV</option>
+<option value="B">B - Economy</option>
+<option value="C">C - Compact</option>
+</select>
+<select id="model" onchange="updateProgress()">
+<option value="">Select Category</option>
+</select>
+</div>
+
+
+<div class="input-row"><!-- Brazilian States (UF) -->
+<select id="state" onchange="updateProgress()">
+<option value="">State (UF)</option>
+<option>AC</option>
+<option>AL</option>
+<option>AP</option>
+<option>AM</option>
+<option>BA</option>
+<option>CE</option>
+<option>DF</option>
+<option>ES</option>
+<option>GO</option>
+<option>MA</option>
+<option>MT</option>
+<option>MS</option>
+<option>MG</option>
+<option>PA</option>
+<option>PB</option>
+<option>PR</option>
+<option>PE</option>
+<option>PI</option>
+<option>RJ</option>
+<option>RN</option>
+<option>RS</option>
+<option>RO</option>
+<option>RR</option>
+<option>SC</option>
+<option>SP</option>
+</html>
