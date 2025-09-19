@@ -33,17 +33,17 @@ It allows users to **register, log in, and manage car rental data** in a simple 
 
 📂 Project Structure
 📦 car-rental-system
- ┣ 📜 index.html        # Home page
- ┣ 📜 register.html     # Registration page
- ┣ 📜 login.html        # Login page
- ┣ 📜 rental.html       # Car rental form
- ┣ 📂 css
- ┃ ┗ 📜 style.css       # Styles
- ┣ 📂 js
- ┃ ┗ 📜 script.js       # Project logic
- ┣ 📂 img
- ┃ ┗ 📜 logo.png        # System logo
- ┗ 📜 README.md         # Project documentation
+ -┣ 📜 index.html        # Home page
+ -┣ 📜 register.html     # Registration page
+ -┣ 📜 login.html        # Login page
+ -┣ 📜 rental.html       # Car rental form
+ -┣ 📂 css
+ -┃ ┗ 📜 style.css       # Styles
+ -┣ 📂 js
+ -┃ ┗ 📜 script.js       # Project logic
+ -┣ 📂 img
+ -┃ ┗ 📜 logo.png        # System logo
+ -┗ 📜 README.md         # Project documentation
 
 📖 Author
 
