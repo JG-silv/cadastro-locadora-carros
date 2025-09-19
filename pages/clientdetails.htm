@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rental Details</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+<h1>Vehicle & Rental Details</h1>
+<div id="details"></div>
+<button onclick="goBack()">Back to Registration</button>
+</div>
+
+
+<script>
+const client = JSON.parse(sessionStorage.getItem('loggedClient'));
+if (!client) {
+document.getElementById('details').innerHTML = '<p>User is not logged in.</p>';
+} else {
+const vehicleImages = {
+"Jeep Renegade": "https://www.jeep.com.br//renegade/asset/versoes/turbo/jeep-renegade-turbo-carbon-black.webp",
+"Corolla Cross": "https://quatrorodas.abril.com.br/wp-content/uploads/2024/04/XRX-Hybrid_C.Cross_2025_2-1.jpg?quality=70&strip=info&w=1280&h=720&crop=1",
+"T-Cross": "https://mundodoautomovelparapcd.com.br/wp-content/uploads/2024/08/VW-T-Cross-200-TSI-2025-01-1536x864.jpg",
+"Volvo XC60": "https://cdn.motor1.com/images/mgl/0e7LGp/s3/volvo-xc60-2024.webp",
+"Gol": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Volkswagen_Gol_Highline_2023_%2853708009248%29_%28cropped%29.jpg/960px-Volkswagen_Gol_Highline_2023_%2853708009248%29_%28cropped%29.jpg",
+"Fiat Palio": "https://tribunadonorte.com.br/wp-content/uploads/2023/07/84965.jpg",
+"Siena": "https://production.autoforce.com/uploads/version/profile_image/4482/comprar-attractive-1-4_bf02c9c6c3.png",
+"Ford Ka": "https://img2.icarros.com/dbimg/galeriaimgmodelo/1/133902_1.webp",
+"Renault Kwid": "https://s2.glbimg.com/eaTJV7tLOellWlLRozE9QlidATI=/fit-in/940x590/e.glbimg.com/og/ed/f/original/2017/06/12/renault-kwid-dianteira.jpg",
+</html>
